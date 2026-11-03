@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Misbachul Amin Nurmakin Putra || Portofolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    <header>
+<body class="bg-[#4EEDB2] min-h-screen">
+    <header class="bg-[#102E2B] text-white font-bold">
+        <div class="max-w-auto min-h-[70px] underline  flex flex-col flex-row items-center">
+            <div class="ml-5 flex-1">
         <a href="tailwind.html">Aloel</a>
-        <nav class="navbar">
-            <div class="div-nav">
+            </div>
+            <div class= mr-5 gap-x-5">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#project">Projects</a>
@@ -19,11 +23,13 @@
         </nav>
     </header>
     <hr>
-    <section id="home">
-        <img src="img/image.png" alt="yabi-profile" width="180px" style="border-radius: 10px;">
-        <p>Computer Enginerring Student</p>
-        <h1>Misbachul Amin</h1>
-        <p>Interested in web development and computering</p>
+    <section id="home" class="px-16 flex flex-col sm:py-10 flex-auto sm:items-center">
+        <img src="img/image.png" alt="yabi-profile" width="180px" style="border-radius: 90px;">
+        <div class="flex flex-col p-5 items-center text-center">
+            <p class="text-xl uppercase">Computer Enginerring Student</p>
+            <h1 class="text-3xl font-bold">Misbachul Amin Nurmakin Putra</h1>
+            <p class="">Interested in Web Development and Database System</p>
+        </div>
     </section>
     <hr>
     <section id="about">
@@ -63,7 +69,7 @@
         </div>
     </section>
     <hr>
-    <footer style="justify-content: center;">
+    <footer>
         <p>2026 Misbachul Amin</p>
     </footer>
 </body>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misbachul Amin Nurmakin Putra || Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mint: '#4EEDB2',
+                        darkTeal: '#102E2B',
+                        darkTealLight: '#18423e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar matching palette */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #4EEDB2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #102E2B;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #18423e;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(#102E2B 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.12;
+        }
+    </style>
+</head>
+<body class="bg-[#4EEDB2] text-[#102E2B] antialiased selection:bg-[#102E2B] selection:text-[#4EEDB2] relative min-h-screen flex flex-col">
+
+    <!-- Background Grid Effect -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#102E2B] text-white shadow-lg backdrop-blur-md bg-opacity-95 transition-all duration-300 border-b border-[#102E2B]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-2 group">
+            
+                <span class="font-extrabold text-2xl tracking-tight text-white group-hover:text-[#4EEDB2] transition-colors">Aloel</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#about" class="hover:text-[#4EEDB2] transition-colors duration-200 flex items-center gap-1.5 py-2">
+                    <i  class="w-4 h-4 text-[#4EEDB2]"></i> About
+                </a>
+                <a href="#skills" class="hover:text-[#4EEDB2] transition-colors duration-200 flex items-center gap-1.5 py-2">
+                    <i  class="w-4 h-4 text-[#4EEDB2]"></i> Skills
+                </a>
+                <a href="#project" class="hover:text-[#4EEDB2] transition-colors duration-200 flex items-center gap-1.5 py-2">
+                    <i class="w-4 h-4 text-[#4EEDB2]"></i> Projects
+                </a>
+                <a href="#contact" class="hover:text-[#4EEDB2] transition-colors duration-200 flex items-center gap-1.5 py-2">
+                    <i dclass="w-4 h-4 text-[#4EEDB2]"></i> Contacts
+                </a>
+            </nav>
+
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#102E2B] border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl hover:bg-white/10 text-white font-medium flex items-center gap-3">
+                <i data-lucide="user" class="w-5 h-5 text-[#4EEDB2]"></i> About Me
+            </a>
+            <a href="#skills" class="mobile-link block px-4 py-3 rounded-xl hover:bg-white/10 text-white font-medium flex items-center gap-3">
+                <i data-lucide="code-2" class="w-5 h-5 text-[#4EEDB2]"></i> Technical Skills
+            </a>
+            <a href="#project" class="mobile-link block px-4 py-3 rounded-xl hover:bg-white/10 text-white font-medium flex items-center gap-3">
+                <i data-lucide="folder-git-2" class="w-5 h-5 text-[#4EEDB2]"></i> Projects
+            </a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl hover:bg-white/10 text-white font-medium flex items-center gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-[#4EEDB2]"></i> Contacts
+            </a>
+            <a href="#contact" class="mobile-link block w-full text-center bg-[#4EEDB2] text-[#102E2B] font-bold py-3 rounded-xl shadow mt-2">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow z-10">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-12 pb-20 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            
+            <!-- Avatar Frame -->
+            <div class="relative group mb-8">
+                <!-- Glowing Outer Ring -->
+                <div class="absolute -inset-1 bg-[#102E2B] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                
+                <!-- Avatar Graphic/Image Container -->
+                <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-[#102E2B] shadow-2xl flex items-center justify-center overflow-hidden border-4 border-[#102E2B]">
+                    <!-- Generated Stylized Profile Avatar -->
+                    <div class="w-full h-full rounded-full bg-gradient-to-br from-[#102E2B] to-[#18423e] flex flex-col items-center justify-center text-[#4EEDB2] relative">
+                        <img class="rounded-full" src="/img/image.png" alt="yabi-profile">
+                    </div>
+                </div>
+
+                <!-- Status Badge -->
+                <div class="absolute bottom-2 right-2 bg-[#102E2B] text-[#4EEDB2] border-2 border-[#4EEDB2] text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#4EEDB2] animate-ping"></span>
+                    <span>Available</span>
+                </div>
+            </div>
+
+            <!-- Header Badges & Info -->
+            <div class="max-w-3xl space-y-4">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#102E2B] text-[#4EEDB2] font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                    <span>Computer Engineering Student</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-5xl font-black text-[#102E2B] tracking-tight leading-none">
+                    Misbachul Amin Nurmakin Putra
+                </h1>
+
+                <p class="text-lg sm:text-xl font-medium text-[#102E2B]/90 max-w-2xl mx-auto leading-relaxed">
+                    Interested in <span class="font-bold underline decoration-[#102E2B] decoration-2 underline-offset-4">Web Development</span> and <span class="font-bold underline decoration-[#102E2B] decoration-2 underline-offset-4">Database Systems</span>.
+                </p>
+
+
+                <!-- Action Buttons -->
+                <div class="pt-6 flex flex-wrap justify-center gap-4">
+                    <a href="#project" class="bg-[#102E2B] text-[#4EEDB2] hover:bg-[#18423e] font-bold px-7 py-3.5 rounded-xl shadow-xl transition-all duration-200 flex items-center gap-2.5 text-base hover:-translate-y-0.5">
+                        <i data-lucide="folder-open" class="w-5 h-5"></i>
+                        <span>Explore Projects</span>
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-[#102E2B] text-[#102E2B] hover:bg-[#102E2B] hover:text-[#4EEDB2] font-bold px-7 py-3.5 rounded-xl transition-all duration-200 flex items-center gap-2.5 text-base">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto px-4">
+            <hr class="border-t-2 border-[#102E2B]/20">
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#102E2B] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <!-- Background Accent Circle -->
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-[#4EEDB2]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <div class="flex items-center gap-2 text-[#4EEDB2] font-mono text-xs sm:text-sm uppercase tracking-widest mb-2">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>A Little About Me</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 tracking-tight flex items-center gap-3">
+                        <span>About Me</span>
+                        <div class="h-1 w-16 bg-[#4EEDB2] rounded-full"></div>
+                    </h2>
+
+                    <div class="grid grid-col gap-8 items-center">
+                        <div class="lg:col-span-2 space-y-4 text-gray-200 leading-relaxed text-base sm:text-lg">
+                            <p>
+                                Hello! I'm <strong class="text-[#4EEDB2] font-semibold">Misbachul Amin Nurmakin Putra</strong>, a dedicated Computer Engineering student passionate about crafting digital solutions. I specialize in building efficient web applications and robust database architectures.
+                            </p>
+                            <p>
+                                Driven by curiosity and analytical problem-solving, I continually explore emerging web technologies, backend frameworks, and relational database systems. My focus is on creating seamless user experiences powered by clean, scalable code.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto px-4">
+            <hr class="border-t-2 border-[#102E2B]/20">
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#102E2B] font-mono font-bold text-xs sm:text-sm uppercase tracking-widest bg-[#102E2B]/10 px-3 py-1 rounded-full">
+                    Technical Stack
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#102E2B] mt-3 tracking-tight">
+                    Skills & Competencies
+                </h2>
+                <p class="text-[#102E2B]/80 mt-2 font-medium">Tools and technologies I work with to bring ideas to life.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Skill Card: HTML -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="file-code-2" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">HTML5</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Semantic Web Markup</p>
+                </div>
+
+                <!-- Skill Card: CSS -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="palette" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">CSS3 & Tailwind</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Modern Responsive UI</p>
+                </div>
+
+                <!-- Skill Card: Python -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="terminal" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Python</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Logic & Automation</p>
+                </div>
+
+                <!-- Skill Card: PHP -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="server" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">PHP</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Server-Side Scripting</p>
+                </div>
+
+                <!-- Skill Card: Database (MySQL) -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">MySQL & SQL</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Database Management</p>
+                </div>
+
+                <!-- Skill Card: C++ / System Programming -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">C++ Basics</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Computer Hardware & Logic</p>
+                </div>
+
+                <!-- Skill Card: Git & GitHub -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="git-branch" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Git & Version Control</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Code Collaboration</p>
+                </div>
+
+                <!-- Skill Card: Web Dev Best Practices -->
+                <div class="bg-[#102E2B] text-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group border border-white/10 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layers" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">System Architecture</h3>
+                    <p class="text-xs text-[#4EEDB2] mt-1 font-mono">Data Flow & Design</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto px-4">
+            <hr class="border-t-2 border-[#102E2B]/20">
+        </div>
+
+        <!-- Projects Section -->
+        <section id="project" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#102E2B] font-mono font-bold text-xs sm:text-sm uppercase tracking-widest bg-[#102E2B]/10 px-3 py-1 rounded-full">
+                    Selected Work
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#102E2B] mt-3 tracking-tight">
+                    Featured Projects
+                </h2>
+                <p class="text-[#102E2B]/80 mt-2 font-medium">Highlighting my practical work in web and database software development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Project Card 1 -->
+                <div class="bg-[#102E2B] text-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/10 flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-[#4EEDB2] text-[#102E2B] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Database System
+                            </span>
+                            <i data-lucide="database" class="w-6 h-6 text-[#4EEDB2]"></i>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-2">Cashier Database System</h3>
+                        
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            A comprehensive relational database solution built for managing cashier cashflow, processing store sales transactions, and generating detailed transaction logs.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">PHP</span>
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">MySQL</span>
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">Database Design</span>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-[#102E2B] text-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/10 flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-[#4EEDB2] text-[#102E2B] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Web Development
+                            </span>
+                            <i data-lucide="layout" class="w-6 h-6 text-[#4EEDB2]"></i>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-2">Personal Portfolio Website</h3>
+                        
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            A clean, responsive personal portfolio website created to showcase my profile, skills, academic background, and software engineering projects.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">HTML5</span>
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">Tailwind CSS</span>
+                            <span class="bg-white/10 text-[#4EEDB2] text-xs font-mono px-3 py-1 rounded-lg">JavaScript</span>
+                        </div>
+                    </div>
+
+               
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-7xl mx-auto px-4">
+            <hr class="border-t-2 border-[#102E2B]/20">
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#102E2B] font-mono font-bold text-xs sm:text-sm uppercase tracking-widest bg-[#102E2B]/10 px-3 py-1 rounded-full">
+                    Get in Touch
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#102E2B] mt-3 tracking-tight">
+                    Contact Details
+                </h2>
+                <p class="text-[#102E2B]/80 mt-2 font-medium">Feel free to reach out for collaborations, project inquiries, or networking!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Contact Direct Info -->
+                <div class="bg-[#102E2B] text-white p-8 sm:p-10 rounded-3xl shadow-xl space-y-6 border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Let's Connect</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-8">
+                            I am actively seeking opportunities to collaborate on web engineering, backend APIs, and database design. Send me an email or message!
+                        </p>
+
+                        <div class="space-y-4">
+                            <!-- Email Item -->
+                            <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 group hover:bg-white/10 transition-colors">
+                                <div class="w-12 h-12 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="text-xs text-[#4EEDB2] font-mono uppercase font-semibold">Email Address</p>
+                                    <a href="mailto:msbach138@gmail.com" class="text-white font-bold hover:underline truncate block text-sm sm:text-base">
+                                        msbach138@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub Item -->
+                            <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 group hover:bg-white/10 transition-colors">
+                                <div class="w-12 h-12 rounded-xl bg-[#4EEDB2] text-[#102E2B] flex items-center justify-center shrink-0">
+                                    <i data-lucide="github" class="w-6 h-6"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="text-xs text-[#4EEDB2] font-mono uppercase font-semibold">GitHub Profile</p>
+                                    <a href="https://github.com/justguestt7" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:underline truncate block text-sm sm:text-base">
+                                        github.com/justguestt7
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 font-mono">
+                        <span>Response time: &lt; 24 hrs</span>
+                        <span class="text-[#4EEDB2] font-bold">Open for Internships</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="bg-[#102E2B] text-white p-8 sm:p-10 rounded-3xl shadow-xl border border-white/10">
+                    <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-xs font-mono text-[#4EEDB2] uppercase font-bold mb-1">Your Name</label>
+                            <input type="text" id="name" required placeholder="Enter your full name" 
+                                class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#4EEDB2] focus:ring-1 focus:ring-[#4EEDB2] transition-colors text-sm">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-mono text-[#4EEDB2] uppercase font-bold mb-1">Your Email</label>
+                            <input type="email" id="email" required placeholder="name@example.com" 
+                                class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#4EEDB2] focus:ring-1 focus:ring-[#4EEDB2] transition-colors text-sm">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-mono text-[#4EEDB2] uppercase font-bold mb-1">Message</label>
+                            <textarea id="message" rows="4" required placeholder="Type your message here..." 
+                                class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#4EEDB2] focus:ring-1 focus:ring-[#4EEDB2] transition-colors text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-[#4EEDB2] text-[#102E2B] hover:bg-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#102E2B] text-white py-8 border-t border-white/10 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-[#4EEDB2] text-[#102E2B] font-black flex items-center justify-center text-sm">
+                    A
+                </div>
+                <p class="text-sm text-gray-300">
+                    &copy; 2026 <span class="text-white font-bold">Misbachul Amin Nurmakin Putra</span>. All rights reserved.
+                </p>
+            </div>
+
+            <!-- Back to Top Button -->
+            <a href="#home" class="bg-white/10 hover:bg-[#4EEDB2] hover:text-[#102E2B] text-white p-2.5 rounded-xl transition-all duration-200 flex items-center gap-2 text-xs font-bold" title="Back to Top">
+                <span>Top</span>
+                <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- Toast Notification Widget -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-[#102E2B] text-[#4EEDB2] border-2 border-[#4EEDB2] px-5 py-3 rounded-2xl shadow-2xl transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none z-50 flex items-center gap-3">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-[#4EEDB2]"></i>
+        <span id="toast-message" class="text-sm font-semibold">Action completed successfully!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Handler
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+
+        function showToast(msg) {
+            toastMessage.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3500);
+        }
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            showToast(`Thank you ${name}! Your message has been sent.`);
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
