@@ -1,0 +1,2 @@
+1. pada atribut 'bg' berasal dari padanan backgroundcolour untuk web kita,keuntungan yang didapat agar nanti dapat di panggil dengan enak 
+2. dengan atribut pointer-event-none maka saat cursor kita hover ke agar menghilang

@@ -1,0 +1,2 @@
+1. dikarenakan value dari atribut i berada diluar tanda <>..</>, , kesalahan ada di variabel i ke-2 pada atribut dclass yang harusnya class
+2. cara memproses kode di lucide yaitu dengan identifikasi id pada atribut variabel, <i class="..."> About </i>, <i class="...">Contacs</>
